@@ -17,7 +17,7 @@ const About = () => {
   const navigate= useNavigate()
   return (
     <>
-    <Stack onClick={()=>navigate("/skills")} justifyContent={"center"} alignItems={"center"} sx={{position:"fixed",top:"50%" , right:"50px" , transform: "translate(0, -50%)", border:"2px solid white", borderRadius:"50%" , height:"50px" , width:"50px"}}>
+    <Stack onClick={()=>navigate("/skills")} justifyContent={"center"} alignItems={"center"} sx={{position:"fixed",top:"50%" , right:"50px" , transform: "translate(0, -50%)", border:"2px solid white", borderRadius:"50%" , height:"50px" , width:"50px",}}>
       <ArrowForwardIosIcon color="info"/>
     </Stack>
       <Stack

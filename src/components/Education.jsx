@@ -24,19 +24,19 @@ const Education = () => {
           borderRadius: "50%",
           height: "50px",
           width: "50px",
+          
         }}
       >
         <ArrowForwardIosIcon color="info" />
       </Stack>
       <Box
         sx={{
-          height: "100vh",
+          minHeight: "100vh",
           backgroundColor: "black",
           maxWidth: "100vw",
-          minHeight: "100vh",
-          paddingInline: { md: "50px", lg: "0" },
-          paddingLeft: { lg: "150px" },
-          paddingTop: "30px",
+          paddingInline: { xs: "20px", md: "80px", lg: "250px" },
+          paddingLeft: { lg: "250px" },
+          paddingTop: { xs: "30px", lg: "100px" },
         }}
       >
         <Typography
@@ -46,6 +46,14 @@ const Education = () => {
           sx={{ fontWeight: "bold" }}
         >
           Education:
+        </Typography>
+        <Typography
+          variant={"h3"}
+          color={"white"}
+          gutterBottom
+          sx={{ fontWeight: "bold" }}
+        >
+          certeficates:
         </Typography>
       </Box>
     </>

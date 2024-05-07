@@ -16,28 +16,30 @@ import End from "./components/End";
 
 function App() {
   const [count, setCount] = useState(0);
-  const routes=["about","education"];
+  const routes = ["about", "education"];
 
   return (
     <>
-      
       <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Stack sx={{backgroundColor:"black"}} >
-        <Sidebar sx={{borderRight:"1px white solid"}}/>
-        <Routes>
-        <Route path="/" element={<About sx={{BorderBottom:"white 1px solid"}}/>} />
-        <Route path="/skills" element={<Skills/>} />
-        <Route path="/education" element={<Education/>} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/end" element={<End/>} />
-        </Routes>
-        {/* <Footer/> */}
-        
-     
-      </Stack>
+        <CssBaseline />
+        <Stack sx={{ backgroundColor: "black" }}>
+          <Sidebar sx={{ borderRight: "1px white solid" }} />
+          
+
+            <Routes>
+              <Route
+                path="/"
+                element={<About sx={{ BorderBottom: "white 1px solid" }} />}
+              />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/end" element={<End />} />
+            </Routes>
+
+
+        </Stack>
       </ThemeProvider>
-    
     </>
   );
 }

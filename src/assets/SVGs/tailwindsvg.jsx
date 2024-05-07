@@ -1,6 +1,6 @@
 import React from "react";
 
-const tailwindsvg = () => {
+const Tailwindsvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,4 @@ const tailwindsvg = () => {
   );
 };
 
-export default tailwindsvg;
+export default Tailwindsvg;

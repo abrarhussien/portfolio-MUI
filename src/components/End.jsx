@@ -23,11 +23,12 @@ const End = () => {
           borderRadius: "50%",
           height: "50px",
           width: "50px",
+          
         }}
       >
         <ArrowForwardIosIcon color="info" />
       </Stack>
-      <Box
+      <Stack justifyContent={"center"} alignItems={"center"}
         sx={{
           height: "100vh",
           backgroundColor: "black",
@@ -36,17 +37,18 @@ const End = () => {
           paddingInline: { md: "50px", lg: "0" },
           paddingLeft: { lg: "150px" },
           paddingTop: "30px",
+          
         }}
       >
         <Typography
           variant={"h3"}
           color={"white"}
           gutterBottom
-          sx={{ fontWeight: "bold" }}
+          sx={{  }}
         >
-          end:
+          ` Well done is better than well said '
         </Typography>
-      </Box>
+      </Stack>
     </>
   )
 }
