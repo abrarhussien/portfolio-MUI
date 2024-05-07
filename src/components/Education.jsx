@@ -1,13 +1,32 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useNavigate } from "react-router-dom";
 
-
+import CertificationIcon from "../assets/SVGs/certificationIcon";
 
 const Education = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
+
+  const Certifications = [
+    { year: "2024", name: "Meta, Meta Front‑End Developer", from: "Coursera" },
+    {
+      year: "2024",
+      name: "Angular University, Typescript Bootcamp Beginner To Advanced",
+      from: "Udemy",
+    },
+    {
+      year: "2024",
+      name: "Johns Hopkins University, HTML, CSS, and JavaScript for Web Developers",
+      from: "Coursera",
+    },
+    {
+      year: "2023",
+      name: "NTI, Web Design Digital Egypt Youth Program",
+      from: "NTI",
+    },
+  ];
 
   return (
     <>
@@ -24,7 +43,7 @@ const Education = () => {
           borderRadius: "50%",
           height: "50px",
           width: "50px",
-          
+          "&:hover": { cursor: "pointer" },
         }}
       >
         <ArrowForwardIosIcon color="info" />
@@ -53,11 +72,43 @@ const Education = () => {
           gutterBottom
           sx={{ fontWeight: "bold" }}
         >
-          certeficates:
+          Certifications:
         </Typography>
+        {Certifications.map((cert) => (
+          <Stack direction={"row"} alignItems={"center"}>
+            <Box sx={{ width: "30px", height: "30px", marginRight: "5px" }}>
+              <CertificationIcon />
+            </Box>
+
+            <Typography
+              variant={"h6"}
+              color={"lightGrey"}
+              gutterBottom
+              sx={{ fontWeight: "bold", marginRight: "15px" }}
+            >
+              {cert.year}
+            </Typography>
+            <Typography
+              variant={"h6"}
+              color={"white"}
+              gutterBottom
+              sx={{ fontWeight: "bold", marginRight: "10px" }}
+            >
+              {cert.name + ","}
+            </Typography>
+            <Typography
+              variant={"h6"}
+              color={"primary"}
+              gutterBottom
+              sx={{ fontWeight: "bold","&:hover" : { cursor: "pointer"} }}
+            >
+              {cert.from}
+            </Typography>
+          </Stack>
+        ))}
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Education
+export default Education;

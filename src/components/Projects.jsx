@@ -105,7 +105,7 @@ const Projects = () => {
           border: "2px solid white",
           borderRadius: "50%",
           height: "50px",
-          width: "50px",
+          width: "50px","&:hover" : { cursor: "pointer"}
         }}
       >
         <ArrowForwardIosIcon color="info" />
@@ -151,7 +151,7 @@ const Projects = () => {
               <Typography variant="p" color={"white"}>
                 {project.details}
               </Typography>
-              <Box sx={{ marginTop: "20px" ,hover: { cursor: 'pointer' }}} onClick={()=>changeimg(index)} >
+              <Box sx={{ marginTop: "20px","&:hover" : { cursor: "pointer"} }} onClick={()=>changeimg(index)} >
                 <img width={"100%"} src={project.imgs[currentImage[index]]} />
               </Box>
               <Stack
@@ -163,7 +163,7 @@ const Projects = () => {
                   <Typography variant="p" color={"white"} gutterBottom>
                     frontend
                   </Typography>
-                  <Box color={"white"} sx={{ width: "50px", height: "50px" }}>
+                  <Box color={"white"} sx={{ width: "50px", height: "50px","&:hover" : { cursor: "pointer"} }}>
                     <Github2 />
                   </Box>
                 </Stack>
@@ -171,7 +171,7 @@ const Projects = () => {
                   <Typography variant="p" color={"white"} gutterBottom>
                     backend
                   </Typography>
-                  <Box color={"white"} sx={{ width: "50px", height: "50px" }}>
+                  <Box color={"white"} sx={{ width: "50px", height: "50px","&:hover" : { cursor: "pointer"} }}>
                     <Github3 />
                   </Box>
                 </Stack>}

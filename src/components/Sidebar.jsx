@@ -50,7 +50,7 @@ const Sidebar = () => {
 
                 <ListItem disablePadding >
                     <ListItemButton onClick={()=>{navigate("/education")}}>
-                        <ListItemText sx={{textAlign:"center"}} primary="CERTEFICATES" /> 
+                        <ListItemText sx={{textAlign:"center"}} primary="CERTIFICATIONS" /> 
                     </ListItemButton>
                 </ListItem>
             </List>

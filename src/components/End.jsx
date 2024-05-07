@@ -22,7 +22,7 @@ const End = () => {
           border: "2px solid white",
           borderRadius: "50%",
           height: "50px",
-          width: "50px",
+          width: "50px","&:hover" : { cursor: "pointer"}
           
         }}
       >

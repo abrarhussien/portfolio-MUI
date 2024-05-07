@@ -17,7 +17,7 @@ const About = () => {
   const navigate= useNavigate()
   return (
     <>
-    <Stack onClick={()=>navigate("/skills")} justifyContent={"center"} alignItems={"center"} sx={{position:"fixed",top:"50%" , right:"50px" , transform: "translate(0, -50%)", border:"2px solid white", borderRadius:"50%" , height:"50px" , width:"50px",}}>
+    <Stack onClick={()=>navigate("/skills")} justifyContent={"center"} alignItems={"center"} sx={{position:"fixed",top:"50%" , right:"50px" , transform: "translate(0, -50%)", border:"2px solid white", borderRadius:"50%" , height:"50px" , width:"50px","&:hover" : { cursor: "pointer"}}}>
       <ArrowForwardIosIcon color="info"/>
     </Stack>
       <Stack
@@ -94,13 +94,13 @@ const About = () => {
             >
               say hello
             </Typography>
-            <Typography  variant="p" color={"white"} gutterBottom>
+            <Typography sx={{"&:hover" : { cursor: "pointer"}}}  variant="p" color={"white"} gutterBottom>
               abrarhussien@gmail.com
             </Typography>
             <Stack spacing={1} direction="row" sx={{marginTop:"25px"}}>
             
-                <LinkedInIcon fontSize="large" color="primary"/>
-                <GitHubIcon fontSize="large" color="primary"/>
+                <LinkedInIcon sx={{"&:hover" : { cursor: "pointer"}}} fontSize="large" color="primary"/>
+                <GitHubIcon sx={{"&:hover" : { cursor: "pointer"}}} fontSize="large" color="primary"/>
 
             </Stack>
           </Grid>
