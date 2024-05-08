@@ -18,8 +18,8 @@ const Bootstrapsvg = () => {
           gradientTransform="translate(1.11 14.613)scale(.24566)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#9013fe" />
-          <stop offset="1" stop-color="#6610f2" />
+          <stop offset="0" stopColor="#9013fe" />
+          <stop offset="1" stopColor="#6610f2" />
         </linearGradient>
         <linearGradient
           id="deviconBootstrap1"
@@ -30,8 +30,8 @@ const Bootstrapsvg = () => {
           gradientTransform="translate(0 52)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#fff" />
-          <stop offset="1" stop-color="#f1e5fc" />
+          <stop offset="0" stopColor="#fff" />
+          <stop offset="1" stopColor="#f1e5fc" />
         </linearGradient>
         <filter
           id="deviconBootstrap2"
@@ -39,10 +39,10 @@ const Bootstrapsvg = () => {
           height="249"
           x="161.9"
           y="135.46"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"

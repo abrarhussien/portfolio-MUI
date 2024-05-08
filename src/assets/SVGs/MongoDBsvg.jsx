@@ -18,15 +18,15 @@ const MongoDBsvg = () => {
           gradientTransform="matrix(-.977 -.323 -.29 .877 -375.944 -928.287)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".231" stop-color="#999875" />
-          <stop offset=".563" stop-color="#9b9977" />
-          <stop offset=".683" stop-color="#a09f7e" />
-          <stop offset=".768" stop-color="#a9a889" />
-          <stop offset=".837" stop-color="#b7b69a" />
-          <stop offset=".896" stop-color="#c9c7b0" />
-          <stop offset=".948" stop-color="#deddcb" />
-          <stop offset=".994" stop-color="#f8f6eb" />
-          <stop offset="1" stop-color="#fbf9ef" />
+          <stop offset=".231" stopColor="#999875" />
+          <stop offset=".563" stopColor="#9b9977" />
+          <stop offset=".683" stopColor="#a09f7e" />
+          <stop offset=".768" stopColor="#a9a889" />
+          <stop offset=".837" stopColor="#b7b69a" />
+          <stop offset=".896" stopColor="#c9c7b0" />
+          <stop offset=".948" stopColor="#deddcb" />
+          <stop offset=".994" stopColor="#f8f6eb" />
+          <stop offset="1" stopColor="#fbf9ef" />
         </linearGradient>
         <linearGradient
           id="vscodeIconsFileTypeMongo1"
@@ -37,8 +37,8 @@ const MongoDBsvg = () => {
           gradientTransform="matrix(-.977 -.323 -.29 .877 -375.944 -928.287)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#48a547" />
-          <stop offset="1" stop-color="#3f9143" />
+          <stop offset="0" stopColor="#48a547" />
+          <stop offset="1" stopColor="#3f9143" />
         </linearGradient>
         <linearGradient
           id="vscodeIconsFileTypeMongo2"
@@ -49,10 +49,10 @@ const MongoDBsvg = () => {
           gradientTransform="matrix(-.977 -.323 -.29 .877 -375.944 -928.287)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#41a247" />
-          <stop offset=".352" stop-color="#4ba74b" />
-          <stop offset=".956" stop-color="#67b554" />
-          <stop offset="1" stop-color="#69b655" />
+          <stop offset="0" stopColor="#41a247" />
+          <stop offset=".352" stopColor="#4ba74b" />
+          <stop offset=".956" stopColor="#67b554" />
+          <stop offset="1" stopColor="#69b655" />
         </linearGradient>
       </defs>
       <path

@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 import CertificationIcon from "../assets/SVGs/certificationIcon";
 
+import ITISvg from "../assets/SVGs/ITISvg";
+import ze from "../assets/images/ze.png";
+
 const Education = () => {
   const navigate = useNavigate();
 
@@ -48,14 +51,14 @@ const Education = () => {
       >
         <ArrowForwardIosIcon color="info" />
       </Stack>
-      <Box
+      <Stack
         sx={{
           minHeight: "100vh",
           backgroundColor: "black",
           maxWidth: "100vw",
           paddingInline: { xs: "20px", md: "80px", lg: "250px" },
           paddingLeft: { lg: "250px" },
-          paddingTop: { xs: "30px", lg: "100px" },
+          paddingTop: { xs: "30px", lg: "150px" },
         }}
       >
         <Typography
@@ -66,16 +69,22 @@ const Education = () => {
         >
           Education:
         </Typography>
+        <Stack direction={"row"} sx={{paddingTop:"20px",paddingLeft:"10px"}}>
+          <ITISvg   />
+          <Box sx={{width:"300px",marginLeft:"20px"}}>
+            <img src={ze} alt="" width={"100%"}/>
+          </Box>
+        </Stack>
         <Typography
           variant={"h3"}
           color={"white"}
           gutterBottom
-          sx={{ fontWeight: "bold" }}
+          sx={{ fontWeight: "bold",marginTop:"90px",marginBottom:"20px" }}
         >
           Certifications:
         </Typography>
-        {Certifications.map((cert) => (
-          <Stack direction={"row"} alignItems={"center"}>
+        {Certifications.map((cert, index) => (
+          <Stack direction={"row"} alignItems={"center"} key={index} sx={{marginBlock:"5px"}}>
             <Box sx={{ width: "30px", height: "30px", marginRight: "5px" }}>
               <CertificationIcon />
             </Box>
@@ -100,13 +109,13 @@ const Education = () => {
               variant={"h6"}
               color={"primary"}
               gutterBottom
-              sx={{ fontWeight: "bold","&:hover" : { cursor: "pointer"} }}
+              sx={{ fontWeight: "bold", "&:hover": { cursor: "pointer" } }}
             >
               {cert.from}
             </Typography>
           </Stack>
         ))}
-      </Box>
+      </Stack>
     </>
   );
 };

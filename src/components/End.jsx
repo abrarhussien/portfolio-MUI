@@ -34,8 +34,8 @@ const End = () => {
           backgroundColor: "black",
           maxWidth: "100vw",
           minHeight: "100vh",
-          paddingInline: { md: "50px", lg: "0" },
-          paddingLeft: { lg: "150px" },
+          paddingInline: { md: "50px",lg: "250px" },
+          paddingLeft: { lg: "250px" },
           paddingTop: "30px",
           
         }}
@@ -44,9 +44,10 @@ const End = () => {
           variant={"h3"}
           color={"white"}
           gutterBottom
-          sx={{  }}
+
+          sx={{ lineHeight:"1.5" }}
         >
-          ` Well done is better than well said '
+          ` Looking back, the biggest motivator is the thought of how proud my younger self would be of the path I've chosen. `
         </Typography>
       </Stack>
     </>

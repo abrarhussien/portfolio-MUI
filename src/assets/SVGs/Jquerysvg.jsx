@@ -43,8 +43,8 @@ const Jquerysvg = () => {
             y2="256"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ff5c00" />
-            <stop offset="1" stop-color="#ff0f00" />
+            <stop stopColor="#ff5c00" />
+            <stop offset="1" stopColor="#ff0f00" />
           </linearGradient>
         </defs>
       </g>

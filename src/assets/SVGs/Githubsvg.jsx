@@ -24,7 +24,7 @@ const Githubsvg = () => {
       <path
         fill="#7dbce7"
         d="M200.9 199.8c0 13.9-32.2 25.1-71.9 25.1s-71.9-11.3-71.9-25.1c0-13.9 32.2-25.1 71.9-25.1s71.9 11.2 71.9 25.1m0 0"
-        clip-path="url(#logosGithubOctocat1)"
+        clipPath="url(#logosGithubOctocat1)"
       />
       <path
         fill="#9edcf2"
