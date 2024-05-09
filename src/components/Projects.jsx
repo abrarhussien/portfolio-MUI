@@ -1,4 +1,11 @@
-import { Box, Button, IconButton, Stack, Typography, styled } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Stack,
+  Typography,
+  styled,
+} from "@mui/material";
 import React, { useState } from "react";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -15,16 +22,16 @@ import Reactdemo1 from "../assets/images/demoreact1.png";
 import Reactdemo2 from "../assets/images/demoreact2.png";
 import Reactdemo3 from "../assets/images/demoreact3.png";
 
-import examDemo1 from "../assets/images/examination1.png"
-import examDemo2 from "../assets/images/examination2.png"
-import examDemo3 from "../assets/images/examination3.png"
-import examDemo4 from "../assets/images/examination4.png"
-import examDemo5 from "../assets/images/examination5.png"
+import examDemo1 from "../assets/images/examination1.png";
+import examDemo2 from "../assets/images/examination2.png";
+import examDemo3 from "../assets/images/examination3.png";
+import examDemo4 from "../assets/images/examination4.png";
+import examDemo5 from "../assets/images/examination5.png";
 
 import Github2 from "../assets/SVGs/github2";
 import Github3 from "../assets/SVGs/github3";
 
-const styledBox= styled(Box)`
+const styledBox = styled(Box)`
   &:hover  {
     cursor: pointer;
   }
@@ -33,22 +40,17 @@ const styledBox= styled(Box)`
 `;
 const Projects = () => {
   const navigate = useNavigate();
-  const [currentImage,setCurrenImage]=useState([0,0,0])
-  const changeimg=(index)=>{
-
-    const newcurrent=[...currentImage];
-    if(currentImage[index]===projects[index].imgs.length-1){
-      newcurrent[index]=0;
-      
-    }
-    else{
-    newcurrent[index]=newcurrent[index]+1
+  const [currentImage, setCurrenImage] = useState([0, 0, 0]);
+  const changeimg = (index) => {
+    const newcurrent = [...currentImage];
+    if (currentImage[index] === projects[index].imgs.length - 1) {
+      newcurrent[index] = 0;
+    } else {
+      newcurrent[index] = newcurrent[index] + 1;
     }
 
-    setCurrenImage(newcurrent)
-
-
-  }
+    setCurrenImage(newcurrent);
+  };
   const projects = [
     {
       color: "#494949",
@@ -83,7 +85,7 @@ const Projects = () => {
       color: "black",
       title: "Examination system",
       details: " HTML, CSS, Bootstrap, and vanila JavaScript",
-      imgs: [examDemo1,examDemo2,examDemo3,examDemo4,examDemo5],
+      imgs: [examDemo1, examDemo2, examDemo3, examDemo4, examDemo5],
       links: {
         frontend: "https://github.com/abrarhussien/examination-system--JS",
         demo: "https://abrarhussien.github.io/examination-system--JS/sign-up",
@@ -93,23 +95,6 @@ const Projects = () => {
 
   return (
     <>
-      <Stack
-        onClick={() => navigate("/education")}
-        justifyContent={"center"}
-        alignItems={"center"}
-        sx={{
-          position: "fixed",
-          top: "50%",
-          right: "50px",
-          transform: "translate(0, -50%)",
-          border: "2px solid white",
-          borderRadius: "50%",
-          height: "50px",
-          width: "50px","&:hover" : { cursor: "pointer"}
-        }}
-      >
-        <ArrowForwardIosIcon color="info" />
-      </Stack>
       <Box
         sx={{
           minHeight: "100vh",
@@ -128,10 +113,10 @@ const Projects = () => {
         >
           projects:
         </Typography>
-        <Stack  sx={{flexDirection:"row", flexWrap:"wrap"}}>
-          {projects.map((project,index) => (
+        <Stack sx={{ flexDirection: "row", flexWrap: "wrap" ,marginTop:"30px"}}>
+          {projects.map((project, index) => (
             <Box
-            key={index}
+              key={index}
               sx={{
                 minHeight: "360px",
                 backgroundColor: project.color,
@@ -151,7 +136,10 @@ const Projects = () => {
               <Typography variant="p" color={"white"}>
                 {project.details}
               </Typography>
-              <Box sx={{ marginTop: "20px","&:hover" : { cursor: "pointer"} }} onClick={()=>changeimg(index)} >
+              <Box
+                sx={{ marginTop: "20px", "&:hover": { cursor: "pointer" },overflow:"hidden" }}
+                onClick={() => changeimg(index)}
+              >
                 <img width={"100%"} src={project.imgs[currentImage[index]]} />
               </Box>
               <Stack
@@ -159,35 +147,83 @@ const Projects = () => {
                 direction={"row"}
                 justifyContent={"space-evenly"}
               >
-                <Stack justifyContent={"center"} alignItems={"center"}  onClick={()=>window.location.href = project.links.frontend}>
+                <Stack
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  onClick={() =>
+                    (window.location.href = project.links.frontend)
+                  }
+                >
                   <Typography variant="p" color={"white"} gutterBottom>
                     frontend
                   </Typography>
-                  <Box color={"white"} sx={{ width: "50px", height: "50px","&:hover" : { cursor: "pointer"} }}>
+                  <Box
+                    color={"white"}
+                    sx={{
+                      width: "50px",
+                      height: "50px",
+                      "&:hover": { cursor: "pointer" },
+                    }}
+                  >
                     <Github2 />
                   </Box>
                 </Stack>
-                {project.links.backend&&<Stack justifyContent={"center"} alignItems={"center"}  onClick={()=>window.location.href = project.links.backend}>
-                  <Typography variant="p" color={"white"} gutterBottom>
-                    backend
-                  </Typography>
-                  <Box color={"white"} sx={{ width: "50px", height: "50px","&:hover" : { cursor: "pointer"} }}>
-                    <Github3 />
-                  </Box>
-                </Stack>}
+                {project.links.backend && (
+                  <Stack
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    onClick={() =>
+                      (window.location.href = project.links.backend)
+                    }
+                  >
+                    <Typography variant="p" color={"white"} gutterBottom>
+                      backend
+                    </Typography>
+                    <Box
+                      color={"white"}
+                      sx={{
+                        width: "50px",
+                        height: "50px",
+                        "&:hover": { cursor: "pointer" },
+                      }}
+                    >
+                      <Github3 />
+                    </Box>
+                  </Stack>
+                )}
               </Stack>
               <Stack sx={{ width: "100%" }} alignItems={"center"}>
                 <Button
                   sx={{ width: "80%", height: "50px" }}
                   color={"info"}
                   variant="outlined"
-                  onClick={()=>window.location.href = project.links.demo}
+                  onClick={() => (window.location.href = project.links.demo)}
                 >
                   live demo
                 </Button>
               </Stack>
             </Box>
           ))}
+        </Stack>
+        <Stack
+          onClick={() => navigate("/education")}
+          justifyContent={"center"}
+          alignItems={"center"}
+          sx={{
+            position: { sm: "fixed" },
+            top: { sm: "50%" },
+            right: { sm: "50px" },
+            rotate: { xs: "90deg", sm: "0deg" },
+            transform: { sm: "translate(0, -50%)" },
+            border: "2px solid white",
+            borderRadius: "50%",
+            height: "50px",
+            width: "50px",
+            "&:hover": { cursor: "pointer" },
+            margin: { xs: "40px auto", sm: "0 0" },
+          }}
+        >
+          <ArrowForwardIosIcon color="info" />
         </Stack>
       </Box>
     </>

@@ -33,24 +33,7 @@ const Education = () => {
 
   return (
     <>
-      <Stack
-        onClick={() => navigate("/end")}
-        justifyContent={"center"}
-        alignItems={"center"}
-        sx={{
-          position: "fixed",
-          top: "50%",
-          right: "50px",
-          transform: "translate(0, -50%)",
-          border: "2px solid white",
-          borderRadius: "50%",
-          height: "50px",
-          width: "50px",
-          "&:hover": { cursor: "pointer" },
-        }}
-      >
-        <ArrowForwardIosIcon color="info" />
-      </Stack>
+
       <Stack
         sx={{
           minHeight: "100vh",
@@ -84,7 +67,8 @@ const Education = () => {
           Certifications:
         </Typography>
         {Certifications.map((cert, index) => (
-          <Stack direction={"row"} alignItems={"center"} key={index} sx={{marginBlock:"5px"}}>
+          <Stack key={index} sx={{marginBlock:"5px",flexDirection:{xs:"column",sm:"row"},alignItems:{sm:"center"}}}>
+            <Stack direction={"row"}>
             <Box sx={{ width: "30px", height: "30px", marginRight: "5px" }}>
               <CertificationIcon />
             </Box>
@@ -97,6 +81,10 @@ const Education = () => {
             >
               {cert.year}
             </Typography>
+
+            </Stack>
+
+
             <Typography
               variant={"h6"}
               color={"white"}
@@ -115,6 +103,26 @@ const Education = () => {
             </Typography>
           </Stack>
         ))}
+        <Stack
+          onClick={() => navigate("/end")}
+          justifyContent={"center"}
+          alignItems={"center"}
+          sx={{
+            position: { sm: "fixed" },
+            top: { sm: "50%" },
+            right: { sm: "50px" },
+            rotate: { xs: "90deg", sm: "0deg" },
+            transform: { sm: "translate(0, -50%)" },
+            border: "2px solid white",
+            borderRadius: "50%",
+            height: "50px",
+            width: "50px",
+            "&:hover": { cursor: "pointer" },
+            margin: { xs: "40px auto", sm: "0 0" },
+          }}
+        >
+          <ArrowForwardIosIcon color="info" />
+        </Stack>
       </Stack>
     </>
   );
